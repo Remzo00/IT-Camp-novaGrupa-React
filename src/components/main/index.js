@@ -1,9 +1,10 @@
 import React from 'react';
+import Button from '../button/button';
 
 const Main = () => {
     return(
         <div>
-            <p>neki tekst</p>
+            <Button  />
         </div>
     )
 }
