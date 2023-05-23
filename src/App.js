@@ -5,6 +5,7 @@ import Footer from './components/footer';
 import Header from './components/header';
 import Input from './components/input/input';
 import Main from './components/main';
+import Counter from './state/counter';
 
 const cardData = [
   {
@@ -27,13 +28,7 @@ const cardData = [
 function App() {
   return (
     <div className="App">
-        {cardData.map((card) => (
-          <Card
-            key={card.id}
-            title={card.title}
-            description={card.description}
-          />
-        ))}
+        <Counter />
     </div>
   );
 }
