@@ -6,6 +6,7 @@ import Header from './components/header';
 import Input from './components/input/input';
 import Main from './components/main';
 import Counter from './state/counter';
+import Text from './state/text';
 
 const cardData = [
   {
@@ -23,12 +24,17 @@ const cardData = [
     title: 'Card 3',
     description: 'This is the third card.',
   },
+  {
+    id: 4,
+    title: 'Card 4',
+    description: 'This is the third card.',
+  },
 ];
 
 function App() {
   return (
     <div className="App">
-        <Counter />
+      <Text />
     </div>
   );
 }
