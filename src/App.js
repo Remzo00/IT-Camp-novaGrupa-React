@@ -6,6 +6,7 @@ import Header from './components/header';
 import Input from './components/input/input';
 import Main from './components/main';
 import Counter from './state/counter';
+import Login from './state/login';
 import Text from './state/text';
 
 const cardData = [
@@ -34,7 +35,7 @@ const cardData = [
 function App() {
   return (
     <div className="App">
-      <Text />
+      <Login />
     </div>
   );
 }
