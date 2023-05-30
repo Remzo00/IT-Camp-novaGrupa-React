@@ -1,42 +1,20 @@
 import './App.css';
-import Button from './components/button/button';
-import Card from './components/card/card';
-import Footer from './components/footer';
-import Header from './components/header';
-import Input from './components/input/input';
-import Main from './components/main';
-import Counter from './state/counter';
-import Login from './state/login';
-import Text from './state/text';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/home';
+import About from './pages/about';
+import Header from './pages/header';
 
-const cardData = [
-  {
-    id: 1,
-    title: 'Card 1',
-    description: 'This is the first card.',
-  },
-  {
-    id: 2,
-    title: 'Card 2',
-    description: 'This is the second card.',
-  },
-  {
-    id: 3,
-    title: 'Card 3',
-    description: 'This is the third card.',
-  },
-  {
-    id: 4,
-    title: 'Card 4',
-    description: 'This is the third card.',
-  },
-];
+//npm i react-router-dom
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <>
+    <Header />
+    <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+    </Routes>
+    </>
   );
 }
 
