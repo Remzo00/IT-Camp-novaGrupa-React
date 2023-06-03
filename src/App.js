@@ -5,6 +5,7 @@ import About from './pages/about';
 import Header from './pages/header';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import ParentComponent from './props/ParentComponent';
 
 //npm i react-router-dom
 //npm install axios
@@ -36,12 +37,13 @@ function App() {
 
   return (
     <div className='container'>
-      {data.map((product) => (
+      <ParentComponent />
+      {/* {data.map((product) => (
         <div>
           <img src={product.image} />
         </div>
 
-      ))}
+      ))} */}
     </div>
   );
 }
