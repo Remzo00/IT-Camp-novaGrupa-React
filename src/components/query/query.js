@@ -12,7 +12,7 @@ const ReactQuery = () => {
     const { data, isLoading, isError, error } = useQuery('products', fetchData)
 
     if(isLoading){
-        return <div>Loading..</div>
+        return <div>Loading...</div>
     }
 
     if(isError){
