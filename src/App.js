@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import ReactQuery from './components/query/query';
+import Todo from './todo';
 
 function App() {
 
   return (
-    <ReactQuery />
+    <Todo />
   );
 }
 
