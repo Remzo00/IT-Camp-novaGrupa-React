@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from "react";
-import { fetchTodos, createTodo } from "../api";
+import React, { useState, useEffect } from "react";
+import { fetchTodos, createTodo, deleteTodo } from "../api";
 //CRUD
 //Create
 //Read
@@ -27,6 +27,14 @@ const Todo = () => {
     setTodos([...todos, createdTodo]);
   };
 
+  const handleDeleteTodo = async (todoId) => {
+    const removeId = await deleteTodo(todoId);
+    if (removeId) {
+      const updatedTodos = todos.filter((todo) => todo.id !== todoId);
+      setTodos(updatedTodos);
+    }
+  };
+
     return(
         <div>
              <input
@@ -37,9 +45,11 @@ const Todo = () => {
       />
         <button onClick={handleCreateTodo}>Add Todo</button>
         <ul>
-          {todos.map((todo) => (
-            <li key={todo.id}>{todo.title}</li>
-          ))}
+        {todos.map((todo) => (
+          <li key={todo.id}>{todo.title}
+           <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+           </li>
+        ))}
         </ul>
       </div>
     )
